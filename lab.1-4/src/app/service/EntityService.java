@@ -36,7 +36,7 @@ public class EntityService {
 
         entityOpt.ifPresent(entity -> {
             entity.setName(newName);
-            System.out.println("✏️ Запис оновлено: " + entity);
+            System.out.println("✏\uFE0F Запис оновлено: " + entity);
         });
     }
 
@@ -48,7 +48,13 @@ public class EntityService {
 
     public void sortByName() {
         entities.sort(Comparator.comparing(Entity::getName));
-        System.out.println("📂 Записи відсортовано за назвою.");
+        System.out.println("\uD83D\uDDC3\uFE0F Записи відсортовано за назвою.");
+        readAll();
+    }
+
+    public void sortById() {
+        entities.sort(Comparator.comparing(Entity::getId));
+        System.out.println("\uD83D\uDDC3\uFE0F Записи відсортовано за ідентифікатором.");
         readAll();
     }
 }

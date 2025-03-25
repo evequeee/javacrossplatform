@@ -11,13 +11,14 @@ public class App {
 
         while (running) {
             System.out.println("\nМеню:");
-            System.out.println("1 - Створити запис");
-            System.out.println("2 - Видалити запис");
-            System.out.println("3 - Зчитати всі записи");
-            System.out.println("4 - Оновити запис");
-            System.out.println("5 - Пошук запису");
-            System.out.println("6 - Сортування записів");
-            System.out.println("0 - Вихід");
+            System.out.println("1 - ✏\uFE0F Створити запис");
+            System.out.println("2 - ☠\uFE0F Видалити запис");
+            System.out.println("3 - \uD83D\uDCC1 Зчитати всі записи");
+            System.out.println("4 - \uD83D\uDD04 Оновити запис");
+            System.out.println("5 - \uD83D\uDD0D Пошук запису");
+            System.out.println("6 - \uD83D\uDDC3\uFE0F Сортування записів за назвою");
+            System.out.println("7 - \uD83D\uDDC3\uFE0F Сортування записів за ідентифікатором");
+            System.out.println("0 - \uD83D\uDD0D Вихід");
 
             System.out.print("Виберіть дію: ");
             int choice = scanner.nextInt();
@@ -49,6 +50,7 @@ public class App {
                     service.search(search);
                 }
                 case 6 -> service.sortByName();
+                case 7 -> service.sortById();
                 case 0 -> {
                     System.out.println("Додаток завершено.");
                     running = false;
